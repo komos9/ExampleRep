@@ -1,0 +1,26 @@
+USE [meleft04]
+GO
+/****** Object:  Table [dbo].[CUSTOMER]    Script Date: 12/16/2013 16:29:36 ******/
+DROP TABLE [dbo].[CUSTOMER]
+GO
+/****** Object:  Table [dbo].[CUSTOMER]    Script Date: 12/16/2013 16:29:36 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[CUSTOMER](
+	[Customer_id] [int] NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Surname] [nvarchar](50) NOT NULL,
+	[Tel1] [int] NOT NULL,
+	[Tel2] [int] NOT NULL,
+	[Cust_Address] [nvarchar](100) NOT NULL,
+	[e_mail] [nvarchar](50) NOT NULL,
+	[DOB] [date] NOT NULL,
+	[Type_of_insurance] [nvarchar](30) NOT NULL,
+ CONSTRAINT [Customer_PK] PRIMARY KEY CLUSTERED 
+(
+	[Customer_id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
